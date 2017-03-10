@@ -1,6 +1,8 @@
-#Ti.NetCDF
+#Ti.NetCDF <img src="https://clas-pages.uncc.edu/techne/wp-content/uploads/sites/93/2013/12/netcdf.png" width=200 />
 
-is the titanium version of NetCDF. 
+This the Titanium version of NetCDF. 
+
+NetCDF is a set of software libraries and self-describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data.
 
 ##Usage
 
