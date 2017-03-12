@@ -9,9 +9,12 @@ NetCDF is a set of software libraries and self-describing, machine-independent d
 ##Usage
 
 ```javascript
-var CDFModule = require("de.appwerft.netcdf")
-var bufrFileName = "S_OSI_FRA_NOAA_NARSSTMNOR_F_200607201000Z.grb";
-var CDF = CDFModule.createNetCDF(Ti.Filesystem.getFile( Ti.Filesystem.applicationDataDirectory,bufrFileName);
+var NetCDFModule = require("de.appwerft.netcdf");
+var BUFRfn = "PAAH21EDZW101030.buf";
+var foo = Ti.Filesystem.getFile( Ti.Filesystem.resourcesDirectory,"BUFS",BUFRfn);
+var bar  = Ti.Filesystem.getFile( Ti.Filesystem.applicationDataDirectory,BUFRfn);
+bar.write(foo.read());
+var CDF = NetCDFModule.createNetCDF(bar);
 console.log(CDF.getFileType());
 ```
 List of available file types [are listed here](http://www.unidata.ucar.edu/software/thredds/current/netcdf-java/reference/formats/FileTypes.html)
