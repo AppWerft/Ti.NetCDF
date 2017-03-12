@@ -10,12 +10,13 @@ NetCDF is a set of software libraries and self-describing, machine-independent d
 
 ```javascript
 var CDFModule = require("de.appwerft.netcdf")
-var CDF = CDFModule.createNetCDF(PATH_TO_CDF_FILE);
-CDF.getFileType();
+var bufrFileName = "S_OSI_FRA_NOAA_NARSSTMNOR_F_200607201000Z.grb";
+var CDF = CDFModule.createNetCDF(Ti.Filesystem.getFile( Ti.Filesystem.applicationDataDirectory,bufrFileName);
+console.log(CDF.getFileType());
 ```
 List of available file types [are listed here](http://www.unidata.ucar.edu/software/thredds/current/netcdf-java/reference/formats/FileTypes.html)
 
-##DAta types
+##Data types
 These are possible types of datas:
 ```javascript
 CDFModule.DATATYPE_INT
